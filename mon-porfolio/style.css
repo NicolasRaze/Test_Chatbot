@@ -1,0 +1,251 @@
+/* Styles de base */
+body {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2c3e50, #4a6491);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #3498db, #e74c3c, #f1c40f);
+}
+
+header h1 {
+    margin: 10px 0 5px 0;
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.3em;
+    margin: 5px 0 20px 0;
+    color: #ecf0f1;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #3498db;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+h2 i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+/* À propos section */
+#a-propos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+}
+
+.profile-container {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3498db;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    flex: 2;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skills span {
+    display: inline-block;
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 5px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* Projets section */
+.cartes-projets-conteneur {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px;
+}
+
+.carte {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    border-radius: 10px;
+    width: 48%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.carte:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.carte-icon {
+    font-size: 2.5em;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.carte h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.carte img {
+    width: 100%;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9em;
+}
+
+.back-to-top {
+    display: block;
+    color: #bdc3c7;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-to-top:hover {
+    color: white;
+}
+
+/* =================================== */
+/*      RESPONSIVE DESIGN               */
+/* =================================== */
+
+@media (max-width: 768px) {
+    #a-propos {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cartes-projets-conteneur {
+        flex-direction: column;
+    }
+
+    .carte {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}
